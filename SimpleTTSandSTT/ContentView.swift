@@ -25,7 +25,6 @@ struct ContentView: View {
                 synthesiser.speak(utterance)
             }
 
-            Text(transcription)
             Button("Recognise") {
                 // Check for permission
                 SFSpeechRecognizer.requestAuthorization { status in
@@ -64,6 +63,7 @@ struct ContentView: View {
                     }
                 }
             }
+            Text(transcription)
         }
         .padding()
     }
